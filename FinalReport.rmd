@@ -1,6 +1,6 @@
 ---
-title: "Aides Drug"
-author: "Abel Jacobp Perez"
+title: "AIDS Drug"
+author: "Abel Jacobo Perez"
 date: "09-28-2021"
 output: html_document
 ---
