@@ -88,3 +88,5 @@ fisher.test(table1)
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
 
+The results showed us that the odds ratio of contracting aids after getting the vaccine in woman was 1.543902 : 1
+The results concluded that the there is a significant difference in the percent of woman who took the vaccine and those who took the placebo, thus we reject the Null hypothesis. Women who got the vaccine were more likely to contract aids then those who got the placebo because the confidence interval for the odd ratio is entirely above 1; (1.240408 1.925729). The vaccine does not protect women but in fact increases the chances of women getting aids,therefor the vaccine is not beneficial for women. 
