@@ -32,16 +32,40 @@ WomanData=filter(triUmp,gender=="F")
 head(WomanData)
 ```
 
+These are the data for all the females in the study.
 
 ## Descriptive Results
 
 ### Graphical Descriptive Results
 
 <!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question. Bottom line is to explain the features of the graph that are relevant to conforming or departing to what is expected by your null hypothesis !-->
+```{r}
+barchartGC(~infected + treatment,data=WomanData)
+barchartGC(~infected + treatment,data=WomanData, type="percent")
 
+```
+```{r}
+dd2 <- WomanData %>% group_by(infected,treatment) %>% summarize(count=n()) %>% mutate(prcnt=count/sum(count))
+
+basicC <- ggplot(dd2,aes(x=infected,y=count,fill=treatment))
+basicC + geom_bar(stat="identity",position="dodge")
+#Now for percentage plot
+
+basicCC <- ggplot(dd2,aes(x=infected,y=prcnt*100,fill=treatment)) 
+basicCC + geom_bar(stat="identity", position = "dodge")
+```
+
+This box plot shows that out of the woman who got aids most of them had taken the vaccine before contracting aids.
+  
 ### Numerical Descriptive Results
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
+```{r}
+table1 <- xtabs(~infected + treatment, data=WomanData)
+rowPerc(table1)
+colPerc(table1)
+```
+
 
 ## Inferential Results
 
